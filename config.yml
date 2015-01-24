@@ -1,0 +1,74 @@
+npc:
+  John:
+    title: "Blacksmith"
+    quests:
+      1: StoneTools
+      2: IronTools
+      nomore: "I've no more quests for you at the moment, sorry!"
+quest:
+  StoneTools:
+    name: "Stone tools"
+    stages:
+      1:
+        type: "bring-item"
+        data: "1 STONE_PICKAXE"
+        ask: "First off, bring me a &5stone pickaxe&f please!"
+        finish: "Thanks! Just what I wanted!"
+        fail: "Where's that &5stone pick&f? Come back when you have it."
+      2:
+        type: "bring-item"
+        data: "1 STONE_SWORD"
+        ask: "Ok, now bring me a simple &5stone sword &fplease."
+        finish: "Perfect!"
+        fail: "You don't have a &5stone sword &fyet..."
+      3:
+        type: "bring-item"
+        data: "1 STONE_AXE"
+        ask: "Nearly there! Now I need a &5stone axe&f."
+        finish: "That will do nicely!"
+        fail: "Have you got that &5stone axe &ffor me yet?"
+      4:
+        type: "bring-item"
+        data: "1 STONE_SPADE"
+        ask: "Finally, I'll need a &5stone spade &fto complete the set."
+        finish: "Excellent!"
+        fail: "Get a &5stone spade &ffor me and I'll talk to you again!"
+    start:
+      message: "Hi there! Would you be willing to get some items for me? There's a reward in it for you!"
+    reward:
+      type: "give-item"
+      data: "2 IRON_INGOT"
+      message: "That's it! Thanks very much. As a reward here are &e&ltwo iron ingots&f to help you."
+  IronTools:
+    name: "Iron tools"
+    stages:
+      1:
+        type: "bring-item"
+        data: "1 IRON_PICKAXE"
+        ask: "I could do with an upgrade. Bring me an &diron pickaxe &fplease!"
+        finish: "Thanks! Just what I wanted!"
+        fail: "Where's that &diron pick&f? Come back when you have it."
+      2:
+        type: "bring-item"
+        data: "1 IRON_SWORD"
+        ask: "Ok, now bring me an &diron sword &fplease."
+        finish: "Perfect!"
+        fail: "You don't have an &diron sword &fyet..."
+      3:
+        type: "bring-item"
+        data: "1 IRON_AXE"
+        ask: "Nearly there! Now I need an &diron axe&f."
+        finish: "That will do nicely!"
+        fail: "Have you got that &diron axe &ffor me yet?"
+      4:
+        type: "bring-item"
+        data: "1 IRON_SPADE"
+        ask: "Finally, I'll need an &diron spade &fto complete the set."
+        finish: "Excellent!"
+        fail: "Get an &diron spade &ffor me and I'll talk to you again!"
+    start:
+      message: "Back for more? Ok, how about this..."
+    reward:
+      type: "give-item"
+      data: "2 GOLD_INGOT"
+      message: "Ok, that'll do. Here, take &e&lthese gold ingots &fas a reward!"

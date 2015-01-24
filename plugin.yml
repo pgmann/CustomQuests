@@ -1,0 +1,34 @@
+name: CustomQuests
+main: com.pgmann.customquests.CustomQuests
+version: '1.0'
+description: "A highly customisable quest-giving plugin. Or at least, it soon will be!"
+author: pgmann
+commands:
+  quest:
+    description: 'See [/quest] for help'
+    usage: 'An error occurred while loading the plugin! Please report this bug.'
+    aliases: quests
+permissions:
+  quests.*:
+    description: Allows you to spectate and stops players spectating you
+    children:
+      quests.use: true
+      quests.admin: true
+    default: false
+  quests.use:
+    description: Allows you to take quests and use the /quest command.
+    default: true
+  quests.admin:
+    description: Allows you to manage all setup and admin commands in CustomQuests.
+    default: op
+    children:
+      quests.use: true
+      quests.admin.manage: true
+      quests.admin.config: true
+  quests.admin.manage:
+    description: Allows you to manage other players' quests and their quest progress and points.
+    default: op
+  quests.admin.config:
+    description: Allows you to reload and configure the plugin from ingame.
+    default: op
+
